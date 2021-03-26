@@ -10,22 +10,14 @@ Truweb is a trufla landing page task using (HTML/CSS/SCSS/JS/GULP), You can acce
 ## Installation
 
 * Clone this git to your new project folder.
-
 * run npm install in your project folder to install all dependencies.
-
 * run gulp in your project folder to start the task manager.
 
 ## Bounes
 
-* Implement a task runner such as Gulp.
+* Implement with Gulp task runner.
 * Implement RTL version dynamically (http://ahmedakl.com/truweb/index-rtl.html)
-* You can access the CMS Wordpress version
-   ```
-   http://ahmedakl.com/truweb/wordpress
-   http://ahmedakl.com/truweb/wordpress/wp-admin
-   admin
-   akl132456
-   ```
+* Implement CMS Wordpress version (http://ahmedakl.com/truweb/wordpress)
 
 ## Copyright
 
