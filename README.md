@@ -18,7 +18,7 @@ Truweb is a trufla landing page task using (HTML/CSS/SCSS/JS/GULP), You can acce
 ## Bounes
 
 * Implement a task runner such as Gulp.
-* Implement RTL version dynamically
+* Implement RTL version dynamically (http://ahmedakl.com/truweb/index-rtl.html)
 * You can access the CMS Wordpress version
    ```
    http://ahmedakl.com/truweb/wordpress
