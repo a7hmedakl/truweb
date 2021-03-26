@@ -1,0 +1,13 @@
+@media only screen and (min-width: $largeScreen) {}
+
+@media only screen and (min-width: $smallScreen) and (max-width: $largeScreen - 1) {}
+
+@media only screen and (min-width: $ipad) and (max-width: $smallScreen - 1) {}
+
+@media only screen and (min-width: $mobile + 1) and (max-width: $ipad - 1) {}
+
+@media only screen and (max-width: $mobile) {}
+
+@media only screen and (max-width: $smallMobile) {}
+
+@media only screen and (max-width: $ipad - 1) and (orientation: landscape) {}

@@ -1,0 +1,331 @@
+@media (min-width: 992px) {
+    .slider,
+    .slide {
+        height: 100%;
+    }
+}
+
+.slider {
+    height: 80vh;
+    @include respond-to(ipad) {
+        height: 80vh;
+    }
+    @include respond-to(largeMobile) {
+        height: 58vh;
+    }
+    @include respond-to(mobile) {
+        height: 45vh;
+    }
+    .slick-list,
+    .slick-list>div,
+    .slick-slide,
+    .slick-slide>div,
+    .container,
+    .container>div {
+        height: 100%;
+    }
+    .container {
+        z-index: 2;
+    }
+    .slick-list {
+        // overflow: hidden;
+        // max-width: 100%;
+    }
+}
+
+.slide {
+    position: relative;
+    height: 100%;
+}
+
+.slide__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.slide__img img {
+    width: auto;
+    height: auto;
+    float: right;
+    object-fit: cover;
+    opacity: 1 !important;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    transition: all 1s ease;
+}
+
+.slide .slide__content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: initial !important;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    @include respond-to(ipad) {
+        text-align: center;
+    }
+    @include respond-to(largeMobile) {
+        text-align: center;
+    }
+    @include respond-to(mobile) {
+        text-align: center;
+    }
+}
+
+.slide .slide__content--headings {
+    display: inline-flex;
+    height: initial !important;
+}
+
+.slide h1,
+.typed {
+    font-size: 66px;
+    color: $white;
+    font-weight: bolder;
+    line-height: 80px;
+    // height: auto;
+    @include respond-to(smallScreen) {
+        font-size: 48px;
+        line-height: 60px;
+    }
+    @include respond-to(ipad) {
+        font-size: 38px;
+        line-height: 48px;
+    }
+    @include respond-to(largeMobile) {
+        font-size: 38px;
+        line-height: 48px;
+    }
+    @include respond-to(mobile) {
+        font-size: 38px;
+        line-height: 48px;
+    }
+}
+
+.slide p {
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-top: 16px;
+    color: $white;
+    animation: fade-in-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+    @include respond-to(largeMobile) {
+        font-size: 16px;
+    }
+    @include respond-to(largeMobile) {
+        font-size: 16px;
+    }
+    @include respond-to(mobile) {
+        font-size: 16px;
+    }
+}
+
+.slide .btn-main {
+    margin-top: 30px;
+    display: inline-block;
+    width: 200px;
+    float: none;
+    padding: 12px 15px;
+    animation: fade-in-bottom 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.2s both;
+    @include respond-to(ipad) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include respond-to(largeMobile) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include respond-to(mobile) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+
+.slide .slide__content--headings .animated {
+    transition: all 0.5s ease;
+}
+
+.slider [data-animation-in] {
+    opacity: 0;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    transition: opacity 0.5s ease 0.3s;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    // left: 0;
+    right: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+.slider .slick-dots {
+    bottom: 0;
+    height: 40px;
+    width: fit-content;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    height: auto;
+}
+
+.slick-dots li button {
+    position: relative;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid rgba($dark, .6);
+    background: transparent;
+    font-size: 0px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: block;
+    outline: none;
+    line-height: 0px;
+    color: transparent;
+    padding: 6px;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    opacity: 1;
+    outline: none;
+}
+
+.slick-dots li.slick-active button {
+    background-color: $secondary;
+    border-color: $secondary;
+    padding: 7px;
+}
+
+.slick-dots li.slick-active button:hover,
+.slick-dots li.slick-active button:focus {
+    opacity: 1;
+}
+
+.slick-arrow {
+    font-size: 18px;
+    color: rgba($dark, .6);
+    border-radius: 50%;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50px;
+    z-index: 99;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba($dark, .6);
+    &.prev-arrow {
+        left: calc(50% - 100px);
+        margin: auto;
+        @include respond-to(ipad) {
+            left: calc(100% - 100px);
+        }
+        @include respond-to(largeMobile) {
+            left: calc(100% - 100px);
+        }
+        @include respond-to(mobile) {
+            left: calc(100% - 100px);
+        }
+    }
+    &.next-arrow {
+        left: calc(50% - 160px);
+        margin: auto;
+        @include respond-to(ipad) {
+            left: calc(100% - 160px);
+        }
+        @include respond-to(largeMobile) {
+            left: calc(100% - 160px);
+        }
+        @include respond-to(mobile) {
+            left: calc(100% - 160px);
+        }
+    }
+    &.slick-disabled {
+        display: none !important;
+    }
+    &:hover {
+        border-color: $secondary;
+        color: $secondary;
+        // opacity: .9;
+    }
+}
+
+
+/* /////////// IMAGE ZOOM /////////// */
+
+@-webkit-keyframes zoomInImage {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    to {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+}
+
+@keyframes zoomInImage {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    to {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+}
+
+.zoomInImage {
+    -webkit-animation-name: zoomInImage;
+    animation-name: zoomInImage;
+}
+
+@-webkit-keyframes zoomOutImage {
+    from {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes zoomOutImage {
+    from {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.zoomOutImage {
+    -webkit-animation-name: zoomOutImage;
+    animation-name: zoomOutImage;
+}
