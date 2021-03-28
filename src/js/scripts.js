@@ -43,6 +43,12 @@ $(function() {
     /*  parallex */
     $(window).scroll(function(e) {
         parallax();
+        var headerHeight = $('header').height();
+        if ($(window).scrollTop() >= headerHeight) {
+            $('.navigation').addClass('sticky');
+        } else {
+            $('.navigation').removeClass('sticky');
+        }
     });
     $(window).resize(function() {
         // siteFooter();

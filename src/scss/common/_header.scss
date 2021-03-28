@@ -2,7 +2,7 @@
 
 header {
     position: relative;
-    z-index: 2;
+    z-index: 99;
 }
 
 .header-top {
@@ -80,6 +80,20 @@ header {
         background: $white;
         position: absolute;
         width: 100%;
+    }
+    &.sticky {
+        @include respond-to(largeScreen) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        @include respond-to(smallScreen) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
     }
     .container {
         @include respond-to(ipad) {
