@@ -14,6 +14,7 @@ var prefix = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 var gulpcopy = require('gulp-copy');
+var stripCssComments = require('gulp-strip-css-comments');
 var babel = require('gulp-babel');
 var reload = browserSync.reload;
 var browserSyncInject = require('gulp-browsersync-inject');
@@ -89,6 +90,7 @@ gulp.task('copyStyle', function() {
     // Copy css
     return gulp.src('src/css/*.css', { sourcemaps: true })
         // .pipe(concat('style.css'))
+        .pipe(stripCssComments())
         .pipe(gulp.dest('dist/css', { prefix: 2 }))
         .pipe(rtlcss()) // Convert to RTL.
         .pipe(rename({ suffix: '-rtl' })) // Append "-rtl" to the filename.
